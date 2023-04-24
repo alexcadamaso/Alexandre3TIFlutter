@@ -1,0 +1,72 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(ComponenteInicial());
+}
+
+class ComponenteInicial extends StatefulWidget {
+  @override
+  _ComponenteInicialState createState() => _ComponenteInicialState();
+}
+
+class _ComponenteInicialState extends State<ComponenteInicial> {
+  var cont = 0;
+
+  incrementcont() {
+    setState(() {
+      cont++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Perguntas e Respostas'),
+        ),
+        body: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(17),
+              child: Column(
+                children: [
+                  ElevatedButton(
+                    onPressed: incrementcont,
+                    child: Text('Enviar'),
+                  ),
+                  ElevatedButton(
+                    onPressed: incrementcont,
+                    child: Text('Cancelar'),
+                  ),
+                  ElevatedButton(
+                    onPressed: incrementcont,
+                    child: Text('Salvar'),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                children: [
+                  ElevatedButton(
+                    onPressed: incrementcont,
+                    child: Text('Aprendendo'),
+                  ),
+                  ElevatedButton(
+                    onPressed: incrementcont,
+                    child: Text('Programação'),
+                  ),
+                  ElevatedButton(
+                    onPressed: incrementcont,
+                    child: Text('Flutter'),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
