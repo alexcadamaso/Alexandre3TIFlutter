@@ -1,0 +1,197 @@
+atividade 1
+
+1)
+
+import 'dart:io';
+import 'dart:math';
+
+main(){
+
+
+double x2;
+  double x1;
+  double y2;
+  double y1;
+  double res;
+  
+print("Informe o x2:");
+x1= double.parse(stdin.readLineSync());  
+ print("Informe o x1:");
+x2= double.parse(stdin.readLineSync()); 
+  print("Informe o y2:");
+y1= double.parse(stdin.readLineSync()); 
+  print("Informe o y1:");
+y2= double.parse(stdin.readLineSync()); 
+
+res = sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+  print('O valor de custo pro consumidor e: $res');
+  
+  
+}
+
+
+
+2) 
+import 'dart:io';
+import 'dart:math';
+
+main(){
+
+
+double x2;
+  double a;
+  double b;
+  double c;
+  double r,s,d;
+  
+print("Informe o A:");
+a= double.parse(stdin.readLineSync());  
+ print("Informe o B:");
+b= double.parse(stdin.readLineSync()); 
+  print("Informe o C:");
+c= double.parse(stdin.readLineSync()); 
+
+r=(a+b)*(a+b);
+s=(b+c)*(b+c);
+
+  d=(r+s) /2;  
+  print('O resultado e: $d');
+  
+  
+}
+
+
+
+
+
+
+
+
+3)
+
+import 'dart:io';
+import 'dart:math';
+
+main(){
+
+double n1;
+double n2;
+double n3;
+double total;
+int p1=2;
+int p2= 3;
+  int p3=5;  
+
+print("Informe a primeira nota:");
+n1= double.parse(stdin.readLineSync());  
+print("Informe a segunda nota:");
+n2=double.parse(stdin.readLineSync());  
+print("Informe a terceira nota:");  
+n3= double.parse(stdin.readLineSync());  
+  
+  total= ((n1*p1)+(n2*p2)+(n3*p3))/ (p1+p2+p3);
+  print('Sua nota total e: $total.');
+  
+  
+}
+
+
+4)
+
+import 'dart:io';
+import 'dart:math';
+
+main(){
+
+
+double segundos;
+  double minutos;
+  double horas;
+  
+print("Informe o tempo em segundos:");
+segundos= double.parse(stdin.readLineSync());  
+  
+  minutos= (segundos/60);
+  print('Tempo em minutos: $minutos.');
+
+  horas=(segundos/3600);
+  print('Tempo em horas: $horas.');
+  print('Tempo em segundos: $segundos.');
+  
+  
+}
+
+
+
+
+
+5)
+
+import 'dart:io';
+import 'dart:math';
+
+main(){
+
+
+double custofabr;
+  double porcdistr=0.28;
+  double porcimpos=0.45;
+  double custcons;
+  
+print("Informe o custo de fabrica:");
+custofabr= double.parse(stdin.readLineSync());  
+  
+ custcons= (custofabr * (porcdistr+porcimpos));
+ custcons= (custofabr+custcons); 
+
+  print('O valor de custo pro consumidor e: $custcons');
+  
+  
+}
+
+
+
+
+
+
+6)
+
+import 'dart:io';
+import 'dart:math';
+
+main(){
+
+
+
+  double a;
+  double b;
+  double c;
+  double d,e,f,x,y;
+  
+print("Informe o A:");
+a= double.parse(stdin.readLineSync());  
+ print("Informe o B:");
+b= double.parse(stdin.readLineSync()); 
+  print("Informe o C:");
+c= double.parse(stdin.readLineSync()); 
+  print("Informe o D:");
+d= double.parse(stdin.readLineSync()); 
+    print("Informe o E:");
+e= double.parse(stdin.readLineSync()); 
+    print("Informe o F:");
+f= double.parse(stdin.readLineSync()); 
+  
+
+x=(c*e)-(b*f)/(a*e)-(b*d);
+y=(a*f)-(c*d)/(a*e)-(b*d);
+
+ 
+  print('O resultado e: $x');
+    print('O resultado e: $y');
+  
+  
+}
+
+
+
+
