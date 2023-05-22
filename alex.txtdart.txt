@@ -1,0 +1,82 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomeScreen(),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('AlexApp'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+ CustomButton('Tela azul\t', Colors.blue),
+  CustomButton('Tela verde\t', Colors.green),
+   CustomButton('Tela preta\t', Colors.black),
+          ],
+    ),
+  ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  final String label;
+  final Color color;
+
+  CustomButton(this.label, this.color);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ColoredScreen(color),
+          ),
+        );
+      },
+      child: Text(label),
+    );
+  }
+}
+
+class ColoredScreen extends StatelessWidget {
+  final Color color;
+
+  ColoredScreen(this.color);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: color,
+      appBar: AppBar(
+        title: Text('Tela de cores'),
+      ),
+      body: Center(
+        child: Text(
+          'Esta é a tela com a opção desejada de cor',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 15,
+          ),
+        ),
+      ),
+    );
+  }
+}
