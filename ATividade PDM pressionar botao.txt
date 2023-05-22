@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('AlexApp (a resposta do construtor do texto está no console do compiler)')),
+        body: Center(
+          child: MeuComponente(
+            texto: ('Aperte'),
+            onPressed: () {
+              print('Olá, tudo bem? Aqui quem fala é o Alexandre, confirmado, botão acionado!!');
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MeuComponente extends StatelessWidget {
+  final String texto;
+  final VoidCallback onPressed;
+
+  const MeuComponente({
+    required this.texto,
+    required this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      child: Text(texto),
+);
+}
+}
